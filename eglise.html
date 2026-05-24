@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Communauté Baptiste de Belgique — Une communauté de foi en Belgique</title>
+  <meta name="description" content="La Communauté Baptiste de Belgique (CBB) : une communauté baptiste évangélique fondée par le Pasteur Constant à Rhode-Saint-Genèse. Cérémonies, accompagnement et vie spirituelle.">
+  <link rel="canonical" href="https://www.reverend.be/eglise.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .presentation-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 30px;
+    }
+    .pastor-image {
+      width: 100%;
+      border: 1px solid var(--gold);
+      padding: 12px;
+      background: var(--bg);
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    .pastor-image-fallback {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border: 1px solid var(--gold);
+      padding: 12px;
+      background: var(--bg-soft);
+      display: grid;
+      place-items: center;
+      color: var(--ink-soft);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      text-align: center;
+    }
+    .internal-nav {
+      position: sticky;
+      top: 90px;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-md);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      margin-bottom: 60px;
+      z-index: 40;
+      box-shadow: var(--shadow-sm);
+    }
+    .internal-nav a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      padding: 8px 6px;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .internal-nav a:hover { color: var(--gold-dark); }
+
+    .multi-image-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .multi-image-container .gallery-image { height: 200px; }
+    .centre-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .centre-container .gallery-image { height: 260px; }
+
+    .ouvrages-section {
+      background: var(--bg-soft);
+      padding: 70px 50px;
+      border-radius: var(--radius-md);
+      margin-top: 80px;
+      border-top: 3px solid var(--gold);
+    }
+    .ouvrages-section .section-title { text-align: center; }
+    .ouvrages-section .section-title::after { left: 50%; transform: translateX(-50%); }
+    .livres-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .livre-item {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--bg);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--rule);
+      transition: transform 0.3s var(--easing), box-shadow 0.3s;
+    }
+    .livre-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .livre-item img {
+      max-height: 220px;
+      width: auto;
+      margin: 0 auto 20px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gold-pale);
+    }
+    .livre-titre {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--ink);
+      margin-bottom: 14px;
+      line-height: 1.3;
+      min-height: 50px;
+    }
+    .livre-lien {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold-dark);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border: 1px solid var(--gold);
+      border-radius: var(--radius-md);
+      transition: background 0.2s, color 0.2s;
+    }
+    .livre-lien:hover {
+      background: var(--gold);
+      color: var(--ink);
+    }
+    @media (max-width: 900px) {
+      .presentation-grid { grid-template-columns: 1fr; gap: 24px; }
+      .pastor-image, .pastor-image-fallback { max-width: 320px; margin: 0 auto; }
+      .internal-nav { position: static; gap: 6px 16px; }
+      .multi-image-container { grid-template-columns: 1fr 1fr; }
+      .centre-container { grid-template-columns: 1fr; }
+      .ouvrages-section { padding: 40px 24px; }
+      .livres-container { grid-template-columns: 1fr; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-strip">
+    Communauté Baptiste de Belgique &nbsp;—&nbsp; <em>en communion fraternelle avec l'AEEBLF</em>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-seal"><span class="brand-seal-letter">C</span></div>
+        <div class="brand-text">
+          <div class="brand-title">Pasteur Constant</div>
+          <div class="brand-sub">Communauté Baptiste de Belgique</div>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Prendre contact</a>
+      </nav>
+      <div class="hamburger-menu">
+        <button id="hamburger-button" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="mobile-menu" class="hidden">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="bapteme.html">Baptême</a></li>
+            <li><a href="mariage.html">Mariage</a></li>
+            <li><a href="enterrement.html">Funérailles</a></li>
+            <li><a href="confirmation.html">Cours de Membres</a></li>
+            <li><a href="guidance.html">Accompagnement Spirituel</a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <header class="page-header">
+    <div class="page-eyebrow">Communauté</div>
+    <h1 class="page-title">Communauté Baptiste de Belgique</h1>
+    <p class="page-subtitle">Une communauté de foi, de partage et de réflexion baptiste évangélique</p>
+  </header>
+
+  <main class="page-main">
+
+    <nav class="internal-nav">
+      <a href="#notre-ministere">Notre Ministère</a>
+      <a href="#nos-croyances">Nos Croyances</a>
+      <a href="#notre-communaute">Notre Communauté</a>
+      <a href="#notre-pasteur">Notre Pasteur</a>
+      <a href="#presbytere">Presbytère</a>
+      <a href="#nos-ouvrages">Nos Ouvrages</a>
+    </nav>
+
+    <section class="content-section reveal" id="notre-ministere">
+      <div class="section-eyebrow">Notre ministère</div>
+      <h2 class="section-title">Un ministère <em>itinérant</em>, fidèle aux Écritures.</h2>
+      <div class="image-gallery" style="grid-template-columns: 1fr;">
+        <img src="eglise_communaute.jpg" alt="Notre ministère — communauté de fidèles baptistes" class="gallery-image" style="height: 360px;" loading="lazy">
+      </div>
+      <p>La Communauté Baptiste de Belgique (CBB) est une communauté baptiste évangélique fondée et dirigée par le Pasteur Constant à Rhode-Saint-Genèse. Notre assemblée transcende les structures traditionnelles : nous considérons que l'Église véritable réside non pas dans les édifices, mais dans la communion des fidèles. Cette perspective nous permet d'offrir un espace accessible à tous, quelle que soit l'étape de votre cheminement spirituel.</p>
+      <p>Fondée sur des principes d'ouverture, d'accueil et de fidélité à la Parole, notre communauté constitue un lieu où chacun peut explorer sa foi selon son propre rythme. Nous recevons avec bienveillance tous ceux qui recherchent une connexion authentique au Christ.</p>
+      <div class="quote-box"><em>« Unitas Lux Christus — Unis dans la Lumière du Christ »</em></div>
+    </section>
+
+    <section class="content-section reveal" id="nos-croyances">
+      <div class="section-eyebrow">Nos croyances</div>
+      <h2 class="section-title">Confession <em>baptiste</em> évangélique.</h2>
+      <div class="image-gallery" style="grid-template-columns: 1fr;">
+        <img src="eglise_priere.jpg" alt="Nos croyances — Bible Louis Segond et tradition baptiste" class="gallery-image" style="height: 360px;" loading="lazy">
+      </div>
+      <p>Nos convictions s'enracinent dans les fondements du christianisme, en particulier dans la tradition baptiste évangélique. Nous affirmons les principes fondateurs du baptisme protestant : l'autorité souveraine des Écritures (<em>Sola Scriptura</em>), le baptême du croyant sur confession de foi personnelle — et non comme rituel administré aux nourrissons —, le sacerdoce universel de tous les croyants, et l'autonomie de chaque communauté locale sous la conduite de l'Esprit Saint.</p>
+      <p>Nous valorisons :</p>
+      <ul>
+        <li>La bienveillance comme fondement de notre foi</li>
+        <li>L'accueil de tous, sans distinction d'origine ou de parcours</li>
+        <li>Le cheminement spirituel individuel, fidèle à la Bible</li>
+        <li>Le service envers autrui comme expression concrète de nos valeurs</li>
+      </ul>
+      <p>Notre approche théologique concilie la fidélité à la tradition baptiste et l'ouverture aux questions contemporaines, offrant à chacun un espace propice à l'épanouissement de sa foi.</p>
+    </section>
+
+    <section class="content-section reveal" id="notre-communaute">
+      <div class="section-eyebrow">Notre communauté</div>
+      <h2 class="section-title">Une <em>famille</em> spirituelle.</h2>
+      <div class="multi-image-container">
+        <img src="communaute_partage.jpg" alt="Notre communauté — moments de partage" class="gallery-image" loading="lazy">
+        <img src="communaute_rencontre.jpg" alt="Notre communauté — rencontres" class="gallery-image" loading="lazy">
+        <img src="communaute_celebration.jpg" alt="Notre communauté — célébrations" class="gallery-image" loading="lazy">
+      </div>
+      <p>Notre communauté rassemble des personnes d'horizons divers, unies par leur quête de sens et leur désir d'authenticité. Nous constituons une famille où chacun trouve sa place dans un climat de respect mutuel.</p>
+      <p>Notre spécificité réside dans la liberté accordée à chaque membre de participer à la vie de notre communauté de foi, que ce soit lors des cérémonies importantes ou des rencontres informelles. En communion fraternelle avec l'<a href="https://www.associationbaptiste.org" target="_blank" rel="noopener" style="color:var(--gold-dark);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:1px;">AEEBLF</a>, la CBB s'inscrit dans le tissu baptiste francophone européen.</p>
+    </section>
+
+    <section class="content-section reveal" id="notre-pasteur">
+      <div class="section-eyebrow">Notre pasteur</div>
+      <h2 class="section-title">Le <em>Pasteur Constant</em>.</h2>
+      <div class="presentation-grid">
+        <img src="reverend_portrait.jpg" alt="Portrait du Pasteur Constant" class="pastor-image" loading="lazy"
+             onerror="this.outerHTML='<div class=&quot;pastor-image-fallback&quot;>Portrait du Pasteur — à insérer</div>';">
+        <div>
+          <p>Le Pasteur Constant est en charge de notre communauté. Il adopte une approche rigoureuse de la Bible Louis Segond, fidèle à la tradition baptiste évangélique, tout en encourageant une interprétation adaptée à la vie moderne.</p>
+          <p>Convaincu que chaque individu a un rôle unique dans le plan divin, il guide ceux qui cherchent une meilleure compréhension de leur chemin spirituel, dans la paix du Christ et pour le salut de leur âme.</p>
+          <p>Pour découvrir son parcours complet, consultez la <a href="presentation.html" style="color:var(--gold-dark);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:1px;">page de présentation</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section reveal" id="presbytere">
+      <div class="section-eyebrow">Notre presbytère</div>
+      <h2 class="section-title">Presbytère de <em>Rhode-Saint-Genèse</em>.</h2>
+      <div class="centre-container">
+        <img src="centre_exterieur.jpg" alt="Presbytère — vue extérieure" class="gallery-image" loading="lazy">
+        <img src="centre_interieur.jpg" alt="Presbytère — vue intérieure" class="gallery-image" loading="lazy">
+      </div>
+      <p>Notre presbytère de Rhode-Saint-Genèse constitue notre lieu d'accueil et de rassemblement. Situé dans un environnement paisible, cet espace fait office de presbytère et de lieu de recueillement pour notre ministère.</p>
+      <p><strong>Adresse :</strong> Octave Michotlaan 1, 1640 Rhode-Saint-Genèse (à 10 minutes de Waterloo)</p>
+      <p>Ce presbytère accueille (sur rendez-vous) :</p>
+      <ul>
+        <li>Les préparations de cérémonies</li>
+        <li>Les accompagnements spirituels</li>
+        <li>Certaines cérémonies et activités</li>
+        <li>Les rencontres communautaires</li>
+      </ul>
+      <p>Bien que notre ministère s'étende au-delà de cette enceinte, ce presbytère représente un point d'ancrage pour ceux qui souhaitent une rencontre personnelle ou un moment de réflexion dans un cadre serein.</p>
+    </section>
+
+    <section class="ouvrages-section reveal" id="nos-ouvrages">
+      <h2 class="section-title">Nos <em>ouvrages</em></h2>
+      <div class="livres-container">
+        <div class="livre-item">
+          <img src="couverture_guidance_spirituelle.png" alt="Couverture Guidance Spirituelle">
+          <p class="livre-titre">Guidance Spirituelle : Le Compas du Chrétien Face aux Défis de la Vie</p>
+          <a href="https://www.amazon.fr/Guidance-Spirituelle-Compas-Chr%C3%A9tien-D%C3%A9fis-ebook/dp/B0CLK8VZJX/" target="_blank" rel="noopener" class="livre-lien">Disponible sur Amazon →</a>
+        </div>
+        <div class="livre-item">
+          <img src="couverture_confirmation_protestante.png" alt="Couverture Vers la Confirmation Protestante">
+          <p class="livre-titre">Vers la Confirmation Protestante : Guide Préparatoire pour Jeunes et Adultes</p>
+          <a href="https://www.amazon.fr/Vers-Confirmation-Protestante-Pr%C3%A9paratoire-Adultes-ebook/dp/B0CSZG2GT4/" target="_blank" rel="noopener" class="livre-lien">Disponible sur Amazon →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Pasteur Constant</div>
+        <div class="footer-brand-sub">
+          Pasteur baptiste indépendant<br>
+          Communauté Baptiste de Belgique<br>
+          Octave Michotlaan 1<br>
+          1640 Rhode-Saint-Genèse
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="bapteme.html">Baptême</a>
+        <a href="mariage.html">Mariage</a>
+        <a href="enterrement.html">Funérailles</a>
+        <a href="confirmation.html">Cours de Membres</a>
+        <a href="guidance.html">Guidance Spirituelle</a>
+      </div>
+      <div class="footer-col">
+        <h4>Communauté</h4>
+        <a href="presentation.html">Présentation</a>
+        <a href="index.html#communaute">La CBB</a>
+        <a href="https://www.baptistesdebelgique.be" target="_blank" rel="noopener">baptistesdebelgique.be</a>
+        <a href="https://www.associationbaptiste.org" target="_blank" rel="noopener">AEEBLF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+32470781834">0470 78 18 34</a>
+        <a href="mailto:info@reverend.be">info@reverend.be</a>
+        <a href="contact.html">Prendre rendez-vous</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Pasteur Constant — Tous droits réservés</div>
+      <div class="footer-devise">Unitas Lux Christus</div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('hamburger-button');
+      var menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          menu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', function(e) {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add('hidden');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

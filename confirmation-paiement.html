@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation effectuée — Pasteur Constant</title>
+  <meta name="description" content="Votre réservation a bien été prise en compte. Merci de votre confiance.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://www.reverend.be/confirmation-paiement.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .confirmation-wrap {
+      min-height: 70vh;
+      display: grid;
+      place-items: center;
+      padding: 60px 36px;
+    }
+    .confirmation-card {
+      max-width: 640px;
+      width: 100%;
+      background: var(--bg);
+      padding: 70px 60px;
+      border: 1px solid var(--gold);
+      text-align: center;
+      position: relative;
+    }
+    .confirmation-card::before,
+    .confirmation-card::after {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-color: var(--gold);
+    }
+    .confirmation-card::before {
+      top: -10px; left: -10px;
+      border-top: 2px solid; border-left: 2px solid;
+    }
+    .confirmation-card::after {
+      bottom: -10px; right: -10px;
+      border-bottom: 2px solid; border-right: 2px solid;
+    }
+    .confirmation-seal {
+      width: 80px;
+      height: 80px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 30px;
+      position: relative;
+      color: var(--gold-dark);
+      font-size: 30px;
+    }
+    .confirmation-seal::before {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border: 1px solid var(--gold-pale);
+      border-radius: 50%;
+    }
+    .confirmation-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 18px;
+    }
+    .confirmation-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(32px, 4.5vw, 44px);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    .confirmation-title em { font-style: italic; color: var(--gold-dark); }
+    .confirmation-text {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: var(--ink-soft);
+      margin-bottom: 18px;
+    }
+    .confirmation-signature {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--gold-pale);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--ink);
+    }
+    .confirmation-actions {
+      margin-top: 40px;
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 640px) {
+      .confirmation-card { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-strip">
+    Communauté Baptiste de Belgique &nbsp;—&nbsp; <em>en communion fraternelle avec l'AEEBLF</em>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-seal"><span class="brand-seal-letter">C</span></div>
+        <div class="brand-text">
+          <div class="brand-title">Pasteur Constant</div>
+          <div class="brand-sub">Communauté Baptiste de Belgique</div>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="hamburger-menu">
+        <button id="hamburger-button" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="mobile-menu" class="hidden">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="bapteme.html">Baptême</a></li>
+            <li><a href="mariage.html">Mariage</a></li>
+            <li><a href="enterrement.html">Funérailles</a></li>
+            <li><a href="confirmation.html">Cours de Membres</a></li>
+            <li><a href="guidance.html">Accompagnement Spirituel</a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="confirmation-wrap">
+    <div class="confirmation-card reveal">
+      <div class="confirmation-seal">✓</div>
+      <div class="confirmation-eyebrow">Confirmation de réservation</div>
+      <h1 class="confirmation-title">Votre date est bien <em>réservée</em> !</h1>
+      <p class="confirmation-text">Nous vous remercions sincèrement pour votre confiance.</p>
+      <p class="confirmation-text">Si vous avez la moindre question ou si vous souhaitez apporter une précision, n'hésitez pas à nous joindre via notre <a href="contact.html" style="color:var(--gold-dark);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:1px;">page de contact</a>.</p>
+      <div class="confirmation-signature">
+        Avec nos salutations fraternelles,<br>
+        — Le secrétariat du Pasteur Constant
+      </div>
+      <div class="confirmation-actions">
+        <a href="index.html" class="btn-secondary">Retour à l'accueil</a>
+        <a href="contact.html" class="btn-primary" style="width:auto;">Nous contacter</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Pasteur Constant</div>
+        <div class="footer-brand-sub">
+          Pasteur baptiste indépendant<br>
+          Communauté Baptiste de Belgique<br>
+          Octave Michotlaan 1<br>
+          1640 Rhode-Saint-Genèse
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="bapteme.html">Baptême</a>
+        <a href="mariage.html">Mariage</a>
+        <a href="enterrement.html">Funérailles</a>
+        <a href="confirmation.html">Cours de Membres</a>
+        <a href="guidance.html">Guidance Spirituelle</a>
+      </div>
+      <div class="footer-col">
+        <h4>Communauté</h4>
+        <a href="presentation.html">Présentation</a>
+        <a href="index.html#communaute">La CBB</a>
+        <a href="https://www.baptistesdebelgique.be" target="_blank" rel="noopener">baptistesdebelgique.be</a>
+        <a href="https://www.associationbaptiste.org" target="_blank" rel="noopener">AEEBLF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+32470781834">0470 78 18 34</a>
+        <a href="mailto:info@reverend.be">info@reverend.be</a>
+        <a href="contact.html">Prendre rendez-vous</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Pasteur Constant — Tous droits réservés</div>
+      <div class="footer-devise">Unitas Lux Christus</div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('hamburger-button');
+      var menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          menu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', function(e) {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add('hidden');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

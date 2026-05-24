@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable — Pasteur Constant</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .err-wrap {
+      min-height: 75vh;
+      display: grid;
+      place-items: center;
+      padding: 60px 36px;
+    }
+    .err-card {
+      max-width: 640px;
+      text-align: center;
+    }
+    .err-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(120px, 18vw, 200px);
+      line-height: 1;
+      color: var(--gold);
+      margin-bottom: 8px;
+      letter-spacing: -0.04em;
+    }
+    .err-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 18px;
+    }
+    .err-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 22px;
+    }
+    .err-title em { font-style: italic; color: var(--gold-dark); }
+    .err-text {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: var(--ink-soft);
+      margin-bottom: 36px;
+    }
+    .err-actions {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-strip">
+    Communauté Baptiste de Belgique &nbsp;—&nbsp; <em>en communion fraternelle avec l'AEEBLF</em>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="brand">
+        <div class="brand-seal"><span class="brand-seal-letter">C</span></div>
+        <div class="brand-text">
+          <div class="brand-title">Pasteur Constant</div>
+          <div class="brand-sub">Communauté Baptiste de Belgique</div>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="/">Accueil</a>
+        <a href="/presentation.html">Présentation</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="err-wrap">
+    <div class="err-card">
+      <div class="err-num">404</div>
+      <div class="err-eyebrow">Page introuvable</div>
+      <h1 class="err-title">Cette page semble s'être <em>égarée</em>.</h1>
+      <p class="err-text">L'adresse que vous cherchez n'existe pas ou n'existe plus. Vous pouvez revenir à l'accueil, consulter la présentation pastorale, ou me contacter directement.</p>
+      <div class="err-actions">
+        <a href="/" class="btn-primary" style="width:auto;">Retour à l'accueil</a>
+        <a href="/contact.html" class="btn-secondary">Me contacter</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Pasteur Constant</div>
+        <div class="footer-brand-sub">
+          Pasteur baptiste indépendant<br>
+          Communauté Baptiste de Belgique<br>
+          Octave Michotlaan 1<br>
+          1640 Rhode-Saint-Genèse
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/bapteme.html">Baptême</a>
+        <a href="/mariage.html">Mariage</a>
+        <a href="/enterrement.html">Funérailles</a>
+        <a href="/confirmation.html">Cours de Membres</a>
+        <a href="/guidance.html">Guidance Spirituelle</a>
+      </div>
+      <div class="footer-col">
+        <h4>Communauté</h4>
+        <a href="/presentation.html">Présentation</a>
+        <a href="https://www.baptistesdebelgique.be" target="_blank" rel="noopener">baptistesdebelgique.be</a>
+        <a href="https://www.associationbaptiste.org" target="_blank" rel="noopener">AEEBLF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+32470781834">0470 78 18 34</a>
+        <a href="mailto:info@reverend.be">info@reverend.be</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Pasteur Constant — Tous droits réservés</div>
+      <div class="footer-devise">Unitas Lux Christus</div>
+    </div>
+  </footer>
+
+</body>
+</html>

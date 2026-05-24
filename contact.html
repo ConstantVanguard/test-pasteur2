@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacter le Pasteur Constant — Pasteur baptiste en Belgique</title>
+  <meta name="description" content="Prenez contact pour toute question ou pour organiser votre cérémonie chrétienne baptiste (mariage, baptême, funérailles). Services disponibles en Belgique et par visioconférence.">
+  <link rel="canonical" href="https://www.reverend.be/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .contact-card {
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      padding: 40px 36px;
+      border-left: 3px solid var(--gold);
+    }
+    .contact-card.dark {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--gold);
+    }
+    .contact-card.dark .form-group label {
+      color: var(--gold);
+    }
+    .contact-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 26px;
+      margin-bottom: 28px;
+      color: inherit;
+      position: relative;
+      padding-bottom: 14px;
+    }
+    .contact-section-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--gold);
+    }
+    .contact-method {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .contact-method-icon {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: var(--gold-dark);
+      font-size: 16px;
+    }
+    .contact-method-text {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .contact-method-text .label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .contact-method-text a {
+      color: var(--ink);
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+    }
+    .contact-method-text a:hover {
+      color: var(--gold-dark);
+    }
+    .contact-services {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+    }
+    .contact-services h3 {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .contact-services ul {
+      list-style: none;
+      padding: 0;
+    }
+    .contact-services li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 14.5px;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .contact-services li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 12px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .contact-form-fields {
+      margin-bottom: 0;
+    }
+    .contact-card.dark .form-group input,
+    .contact-card.dark .form-group textarea {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(184, 154, 86, 0.3);
+      color: var(--bg);
+    }
+    .contact-card.dark .form-group input:focus,
+    .contact-card.dark .form-group textarea:focus {
+      border-color: var(--gold);
+      background: rgba(184, 154, 86, 0.1);
+    }
+    .contact-card.dark .form-group input::placeholder,
+    .contact-card.dark .form-group textarea::placeholder {
+      color: var(--gold-pale);
+      opacity: 0.5;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+      .contact-card { padding: 30px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-strip">
+    Communauté Baptiste de Belgique &nbsp;—&nbsp; <em>en communion fraternelle avec l'AEEBLF</em>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-seal"><span class="brand-seal-letter">C</span></div>
+        <div class="brand-text">
+          <div class="brand-title">Pasteur Constant</div>
+          <div class="brand-sub">Communauté Baptiste de Belgique</div>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="index.html#services">Services</a>
+        <a href="tel:+32470781834" class="nav-cta">Appeler</a>
+      </nav>
+      <div class="hamburger-menu">
+        <button id="hamburger-button" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="mobile-menu" class="hidden">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="bapteme.html">Baptême</a></li>
+            <li><a href="mariage.html">Mariage</a></li>
+            <li><a href="enterrement.html">Funérailles</a></li>
+            <li><a href="confirmation.html">Cours de Membres</a></li>
+            <li><a href="guidance.html">Accompagnement Spirituel</a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <header class="page-header">
+    <div class="page-eyebrow">Prendre contact</div>
+    <h1 class="page-title">Contact</h1>
+    <p class="page-subtitle">À votre écoute pour toute question, projet ou réservation</p>
+  </header>
+
+  <main class="page-main">
+
+    <div class="contact-grid">
+
+      <div class="contact-card reveal">
+        <h2 class="contact-section-title">Coordonnées</h2>
+
+        <div class="contact-method">
+          <div class="contact-method-icon">☎</div>
+          <div class="contact-method-text">
+            <span class="label">Téléphone</span>
+            <a href="tel:+32470781834">0470 78 18 34</a>
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <div class="contact-method-icon">✉</div>
+          <div class="contact-method-text">
+            <span class="label">Courriel</span>
+            <a href="mailto:info@reverend.be">info@reverend.be</a>
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <div class="contact-method-icon">⌂</div>
+          <div class="contact-method-text">
+            <span class="label">Presbytère</span>
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--ink);">Octave Michotlaan 1<br>1640 Rhode-Saint-Genèse</span>
+          </div>
+        </div>
+
+        <div class="contact-services">
+          <h3>Services disponibles</h3>
+          <ul>
+            <li>Au presbytère (à 10 minutes de Waterloo)</li>
+            <li>En déplacement (toute la Belgique)</li>
+            <li>Par visioconférence (WhatsApp vidéo)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-card dark reveal delay-1">
+        <h2 class="contact-section-title" style="color: var(--gold);">Formulaire de contact</h2>
+
+        <form action="https://formspree.io/f/xjkyzbek" method="POST" class="contact-form-fields">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Courriel</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Téléphone (optionnel)</label>
+            <input type="tel" id="phone" name="phone" placeholder="0470 12 34 56">
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Décrivez votre demande, votre projet, ou simplement votre question…" required></textarea>
+          </div>
+          <button type="submit" class="btn">Envoyer le message</button>
+        </form>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Pasteur Constant</div>
+        <div class="footer-brand-sub">
+          Pasteur baptiste indépendant<br>
+          Communauté Baptiste de Belgique<br>
+          Octave Michotlaan 1<br>
+          1640 Rhode-Saint-Genèse
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="bapteme.html">Baptême</a>
+        <a href="mariage.html">Mariage</a>
+        <a href="enterrement.html">Funérailles</a>
+        <a href="confirmation.html">Cours de Membres</a>
+        <a href="guidance.html">Guidance Spirituelle</a>
+      </div>
+      <div class="footer-col">
+        <h4>Communauté</h4>
+        <a href="presentation.html">Présentation</a>
+        <a href="index.html#communaute">La CBB</a>
+        <a href="https://www.baptistesdebelgique.be" target="_blank" rel="noopener">baptistesdebelgique.be</a>
+        <a href="https://www.associationbaptiste.org" target="_blank" rel="noopener">AEEBLF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+32470781834">0470 78 18 34</a>
+        <a href="mailto:info@reverend.be">info@reverend.be</a>
+        <a href="contact.html">Prendre rendez-vous</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Pasteur Constant — Tous droits réservés</div>
+      <div class="footer-devise">Unitas Lux Christus</div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('hamburger-button');
+      var menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          menu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', function(e) {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add('hidden');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

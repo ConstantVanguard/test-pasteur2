@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /confirmation-paiement.html
+
+Sitemap: https://www.reverend.be/sitemap.xml
