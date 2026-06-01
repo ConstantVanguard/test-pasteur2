@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasteur Constant — Pasteur baptiste indépendant en Belgique</title>
+  <meta name="description" content="Pasteur baptiste indépendant en Belgique. Services personnalisés : baptême, mariage, funérailles, cours de membres, accompagnement spirituel. Communauté Baptiste de Belgique.">
+  <link rel="canonical" href="https://www.reverend.be/index.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ─── Spécifique à la home ─── */
+
+    /* Hero plein écran */
+    .home-hero {
+      position: relative;
+      padding: 90px 36px 110px;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at top right, rgba(212, 201, 168, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom left, rgba(184, 154, 86, 0.08) 0%, transparent 50%),
+        var(--bg);
+    }
+
+    .home-hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .home-hero-ornament {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .home-hero-ornament-line {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .home-hero-ornament-text {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+
+    .home-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(48px, 6.5vw, 80px);
+      line-height: 0.98;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
+    .home-hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+    }
+    .home-hero h1 .accent {
+      color: var(--gold-dark);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .home-hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(20px, 2.4vw, 25px);
+      color: var(--ink-soft);
+      margin-bottom: 36px;
+      line-height: 1.5;
+      max-width: 540px;
+    }
+
+    .home-hero-lead {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--ink-soft);
+      margin-bottom: 42px;
+      max-width: 520px;
+    }
+
+    .home-hero-actions {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .home-hero-portrait-wrap {
+      position: relative;
+      aspect-ratio: 3/4;
+    }
+
+    .home-hero-portrait-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      border: 1px solid var(--gold);
+      transition: transform 0.6s var(--easing);
+    }
+    .home-hero-portrait-frame::before,
+    .home-hero-portrait-frame::after {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-color: var(--gold);
+    }
+    .home-hero-portrait-frame::before {
+      top: -10px; left: -10px;
+      border-top: 2px solid; border-left: 2px solid;
+    }
+    .home-hero-portrait-frame::after {
+      bottom: -10px; right: -10px;
+      border-bottom: 2px solid; border-right: 2px solid;
+    }
+
+    .home-hero-portrait-inner {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--bg-soft) 0%, var(--bg-deep) 100%);
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .home-hero-portrait-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      filter: saturate(0.85) contrast(1.05);
+    }
+    .home-hero-portrait-inner-fallback {
+      color: var(--ink-soft);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .home-hero-portrait-caption {
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg);
+      padding: 10px 26px;
+      border: 1px solid var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: var(--ink);
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+    }
+
+    /* Floating badge avec chiffre */
+    .home-hero-badge {
+      position: absolute;
+      top: 20px;
+      right: -30px;
+      width: 140px;
+      height: 140px;
+      background: var(--ink);
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      animation: floatGentle 5s ease-in-out infinite;
+      z-index: 3;
+    }
+    @keyframes floatGentle {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-12px) rotate(2deg); }
+    }
+    .home-hero-badge-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 38px;
+      color: var(--gold);
+      line-height: 1;
+      font-style: italic;
+    }
+    .home-hero-badge-text {
+      font-size: 10px;
+      color: var(--gold-pale);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 4px;
+      line-height: 1.3;
+      padding: 0 16px;
+    }
+
+    /* Devise bandeau dramatique */
+    .home-devise {
+      background: var(--ink);
+      color: var(--gold);
+      padding: 90px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .home-devise::before {
+      content: "";
+      position: absolute;
+      inset: 30px;
+      border: 1px solid rgba(184, 154, 86, 0.25);
+      pointer-events: none;
+    }
+    .home-devise-ornament {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
+    }
+    .home-devise-ornament-line {
+      width: 50px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .home-devise-ornament-text {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--gold-pale);
+      font-weight: 600;
+    }
+    .home-devise-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1.1;
+      color: var(--gold);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 2;
+    }
+    .home-devise-translation {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: var(--gold-pale);
+      letter-spacing: 1px;
+      opacity: 0.85;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Section services grille */
+    .home-services {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 130px 36px 100px;
+    }
+
+    .home-services-head {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .home-services-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 22px;
+    }
+    .home-services-eyebrow::before,
+    .home-services-eyebrow::after {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .home-services-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(34px, 4.5vw, 52px);
+      line-height: 1.1;
+      letter-spacing: -0.005em;
+      color: var(--ink);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .home-services-title em { font-style: italic; }
+
+    .home-services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    /* Première rangée 3 cartes, deuxième rangée 2 cartes centrées */
+    .home-services-grid > *:nth-child(4) {
+      grid-column: 1 / 2;
+      grid-column-start: 1;
+      transform: translateX(50%);
+    }
+    .home-services-grid > *:nth-child(5) {
+      transform: translateX(50%);
+    }
+
+    .home-service-card {
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      padding: 40px 32px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.5s var(--easing), border-color 0.4s, box-shadow 0.4s, background 0.4s;
+      min-height: 320px;
+    }
+    .home-service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s var(--easing);
+    }
+    .home-service-card:hover {
+      transform: translateY(-6px);
+      background: var(--bg-soft);
+      border-color: var(--gold-pale);
+      box-shadow: var(--shadow-md);
+    }
+    .home-service-card:hover::before {
+      transform: scaleX(1);
+    }
+    .home-services-grid > *:nth-child(4):hover,
+    .home-services-grid > *:nth-child(5):hover {
+      transform: translateX(50%) translateY(-6px);
+    }
+
+    .home-service-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 42px;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+    /* Icône par service (remplace le numéro romain) */
+    .home-service-icon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+    .home-service-icon {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      filter: brightness(0.95) contrast(1.05) saturate(0.92);
+      transition: transform 0.4s var(--easing), filter 0.4s var(--easing);
+    }
+    .home-service-card:hover .home-service-icon {
+      transform: scale(1.08) rotate(-3deg);
+      filter: brightness(1) contrast(1.1) saturate(1);
+    }
+    .home-service-num-small {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 22px;
+      color: var(--gold-pale);
+      line-height: 1;
+      letter-spacing: 0.5px;
+    }
+    .home-service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 26px;
+      margin-bottom: 12px;
+      color: var(--ink);
+      letter-spacing: 0.3px;
+    }
+    .home-service-desc {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      margin-bottom: auto;
+      padding-bottom: 26px;
+    }
+    .home-service-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 18px;
+      border-top: 1px solid var(--gold-pale);
+    }
+    .home-service-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--gold-dark);
+    }
+    .home-service-arrow {
+      color: var(--gold-dark);
+      font-size: 18px;
+      transition: transform 0.3s;
+    }
+    .home-service-card:hover .home-service-arrow {
+      transform: translateX(6px);
+    }
+
+    /* Section piliers */
+    .home-pillars {
+      background: var(--bg-soft);
+      padding: 110px 36px;
+    }
+    .home-pillars-inner {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 56px;
+    }
+    .home-pillar {
+      text-align: center;
+    }
+    .home-pillar-num {
+      display: inline-grid;
+      place-items: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 30px;
+      color: var(--gold-dark);
+      margin-bottom: 26px;
+      position: relative;
+    }
+    .home-pillar-num::before {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border: 1px solid var(--gold-pale);
+      border-radius: 50%;
+    }
+    .home-pillar h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 26px;
+      margin-bottom: 14px;
+      color: var(--ink);
+    }
+    .home-pillar p {
+      font-size: 15.5px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    /* Section À propos rapide */
+    .home-about {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: 130px 36px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .home-about-visual {
+      aspect-ratio: 1/1;
+      padding: 16px;
+      border: 1px solid var(--gold);
+      background: var(--bg);
+    }
+    .home-about-visual-inner {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--bg-deep) 0%, #BDB7A5 100%);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .home-about-visual-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .home-about-visual-fallback {
+      color: var(--ink-soft);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .home-about-content .section-eyebrow {
+      margin-bottom: 18px;
+    }
+    .home-about-content .section-eyebrow::before {
+      width: 28px;
+    }
+    .home-about-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(32px, 4vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 28px;
+      color: var(--ink);
+    }
+    .home-about-title em { font-style: italic; }
+    .home-about-content p {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: var(--ink-soft);
+      margin-bottom: 18px;
+    }
+    .home-about-signature {
+      margin-top: 30px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 19px;
+      color: var(--ink);
+    }
+    .home-about-cta {
+      margin-top: 30px;
+    }
+
+    /* Section CBB */
+    .home-cbb {
+      background: var(--ink);
+      color: var(--bg);
+      padding: 110px 36px;
+    }
+    .home-cbb-inner {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+    .home-cbb-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .home-cbb-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .home-cbb h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(32px, 4vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 24px;
+      color: var(--bg);
+    }
+    .home-cbb h2 em { font-style: italic; color: var(--gold); }
+    .home-cbb p {
+      font-size: 16px;
+      line-height: 1.8;
+      opacity: 0.88;
+      margin-bottom: 20px;
+    }
+    .home-cbb a.btn-cbb {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--gold);
+      color: var(--ink);
+      padding: 16px 32px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: var(--radius-md);
+      margin-top: 10px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .home-cbb a.btn-cbb:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px);
+    }
+
+    .home-cbb-card {
+      padding: 50px 40px;
+      border: 1px solid var(--gold);
+      text-align: center;
+    }
+    .home-cbb-card-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 30px;
+      line-height: 1.3;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .home-cbb-card-translation {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-pale);
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+    .home-cbb-card-sep {
+      width: 50px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 30px;
+    }
+    .home-cbb-card-detail {
+      font-size: 14.5px;
+      color: var(--gold-pale);
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+
+    /* CTA final */
+    .home-cta {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: 130px 36px;
+      text-align: center;
+    }
+    .home-cta-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 22px;
+    }
+    .home-cta-eyebrow::before,
+    .home-cta-eyebrow::after {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .home-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.05;
+      color: var(--ink);
+      margin-bottom: 26px;
+    }
+    .home-cta h2 em { font-style: italic; color: var(--gold-dark); }
+    .home-cta p {
+      font-size: 18px;
+      color: var(--ink-soft);
+      max-width: 600px;
+      margin: 0 auto 44px;
+      line-height: 1.7;
+    }
+    .home-cta-actions {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .home-cta-phone {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 4px;
+      transition: color 0.2s;
+    }
+    .home-cta-phone:hover { color: var(--gold-dark); }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .home-hero-inner { grid-template-columns: 1fr; gap: 60px; }
+      .home-hero-badge { width: 100px; height: 100px; right: -10px; top: -10px; }
+      .home-hero-badge-num { font-size: 28px; }
+      .home-hero-portrait-wrap { max-width: 380px; margin: 0 auto; }
+      .home-services-grid { grid-template-columns: 1fr 1fr; }
+      .home-services-grid > *:nth-child(4) { grid-column: 1; transform: none; }
+      .home-services-grid > *:nth-child(5) { transform: none; }
+      .home-services-grid > *:nth-child(4):hover { transform: translateY(-6px); }
+      .home-services-grid > *:nth-child(5):hover { transform: translateY(-6px); }
+      .home-pillars-inner { grid-template-columns: 1fr; gap: 40px; max-width: 480px; }
+      .home-about { grid-template-columns: 1fr; gap: 50px; }
+      .home-about-visual { max-width: 380px; margin: 0 auto; }
+      .home-cbb-inner { grid-template-columns: 1fr; gap: 36px; }
+      .home-hero, .home-services, .home-pillars, .home-about, .home-cbb, .home-cta { padding-left: 24px; padding-right: 24px; }
+    }
+    @media (max-width: 640px) {
+      .home-services-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-strip">
+    Communauté Baptiste de Belgique &nbsp;—&nbsp; <em>en communion fraternelle avec l'AEEBLF</em>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-seal"><span class="brand-seal-letter">C</span></div>
+        <div class="brand-text">
+          <div class="brand-title">Pasteur Constant</div>
+          <div class="brand-sub">Communauté Baptiste de Belgique</div>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="#services">Services</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="#communaute">Communauté</a>
+        <a href="contact.html" class="nav-cta">Prendre contact</a>
+      </nav>
+      <div class="hamburger-menu">
+        <button id="hamburger-button" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="mobile-menu" class="hidden">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="bapteme.html">Baptême</a></li>
+            <li><a href="mariage.html">Mariage</a></li>
+            <li><a href="enterrement.html">Funérailles</a></li>
+            <li><a href="confirmation.html">Cours de Membres</a></li>
+            <li><a href="guidance.html">Accompagnement Spirituel</a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ─── HERO ─────────────────────────────────────── -->
+    <section class="home-hero">
+      <div class="home-hero-inner">
+        <div class="home-hero-text reveal">
+          <div class="home-hero-ornament">
+            <div class="home-hero-ornament-line"></div>
+            <div class="home-hero-ornament-text">Pasteur baptiste — Belgique</div>
+          </div>
+          <h1>
+            Une <em>parole</em>,<br>
+            un accompagnement,<br>
+            une <span class="accent">cérémonie</span> qui vous ressemble.
+          </h1>
+          <p class="home-hero-tagline">Baptême, mariage, funérailles, cours de membres, guidance spirituelle.</p>
+          <p class="home-hero-lead">Pasteur baptiste indépendant à Rhode-Saint-Genèse, fondateur de la Communauté Baptiste de Belgique. Disponible partout en Belgique pour les étapes essentielles de votre vie spirituelle.</p>
+          <div class="home-hero-actions">
+            <a href="contact.html" class="btn-primary" style="width:auto;">Prendre contact</a>
+            <a href="#services" class="btn-secondary">Découvrir mes services</a>
+          </div>
+        </div>
+        <div class="home-hero-portrait-wrap reveal delay-2">
+          <div class="home-hero-portrait-frame">
+            <div class="home-hero-portrait-inner">
+              <img src="reverend_portrait.jpg" alt="Pasteur Constant"
+                   onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;home-hero-portrait-inner-fallback&quot;>Portrait du Pasteur — à insérer</div>';">
+            </div>
+          </div>
+          <div class="home-hero-portrait-caption">Pasteur Constant — ordonné en 2022</div>
+          <div class="home-hero-badge">
+            <div>
+              <div class="home-hero-badge-num">40+</div>
+              <div class="home-hero-badge-text">cérémonies accompagnées</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── DEVISE ──────────────────────────────────── -->
+    <section class="home-devise reveal">
+      <div class="home-devise-ornament">
+        <div class="home-devise-ornament-line"></div>
+        <div class="home-devise-ornament-text">Devise pastorale</div>
+        <div class="home-devise-ornament-line"></div>
+      </div>
+      <p class="home-devise-text">Unitas Lux Christus</p>
+      <p class="home-devise-translation">Unis dans la lumière du Christ</p>
+    </section>
+
+    <!-- ─── SERVICES ────────────────────────────────── -->
+    <section class="home-services" id="services">
+      <div class="home-services-head reveal">
+        <div class="home-services-eyebrow">Mes services pastoraux</div>
+        <h2 class="home-services-title">Cinq services, <em>une même attention</em> portée à votre histoire.</h2>
+      </div>
+
+      <div class="home-services-grid">
+
+        <a href="bapteme.html" class="home-service-card reveal delay-1">
+          <div class="home-service-icon-wrap">
+            <img src="icon_bapteme.png" alt="" class="home-service-icon">
+            <span class="home-service-num-small">I.</span>
+          </div>
+          <div class="home-service-name">Baptême</div>
+          <div class="home-service-desc">Sur confession de foi personnelle, par immersion. Une cérémonie intime préparée avec soin.</div>
+          <div class="home-service-foot">
+            <div class="home-service-price">0 — 150 €</div>
+            <div class="home-service-arrow">→</div>
+          </div>
+        </a>
+
+        <a href="mariage.html" class="home-service-card reveal delay-2">
+          <div class="home-service-icon-wrap">
+            <img src="icon_mariage.png" alt="" class="home-service-icon">
+            <span class="home-service-num-small">II.</span>
+          </div>
+          <div class="home-service-name">Mariage</div>
+          <div class="home-service-desc">Une cérémonie chrétienne à votre image, dans le lieu qui a du sens pour vous.</div>
+          <div class="home-service-foot">
+            <div class="home-service-price">600 €</div>
+            <div class="home-service-arrow">→</div>
+          </div>
+        </a>
+
+        <a href="enterrement.html" class="home-service-card reveal delay-3">
+          <div class="home-service-icon-wrap">
+            <img src="icon_enterrement.png" alt="" class="home-service-icon">
+            <span class="home-service-num-small">III.</span>
+          </div>
+          <div class="home-service-name">Funérailles</div>
+          <div class="home-service-desc">Un dernier hommage digne et respectueux, dans la foi et l'espérance chrétienne.</div>
+          <div class="home-service-foot">
+            <div class="home-service-price">350 €</div>
+            <div class="home-service-arrow">→</div>
+          </div>
+        </a>
+
+        <a href="confirmation.html" class="home-service-card reveal delay-4">
+          <div class="home-service-icon-wrap">
+            <img src="icon_confirmation.png" alt="" class="home-service-icon">
+            <span class="home-service-num-small">IV.</span>
+          </div>
+          <div class="home-service-name">Cours de Membres</div>
+          <div class="home-service-desc">Six heures réparties en trois sessions pour approfondir la foi baptiste évangélique.</div>
+          <div class="home-service-foot">
+            <div class="home-service-price">450 — 700 €</div>
+            <div class="home-service-arrow">→</div>
+          </div>
+        </a>
+
+        <a href="guidance.html" class="home-service-card reveal delay-5">
+          <div class="home-service-icon-wrap">
+            <img src="icon_guidance.png" alt="" class="home-service-icon">
+            <span class="home-service-num-small">V.</span>
+          </div>
+          <div class="home-service-name">Guidance Spirituelle</div>
+          <div class="home-service-desc">Une écoute pastorale confidentielle. Forfait six heures ou séance ponctuelle.</div>
+          <div class="home-service-foot">
+            <div class="home-service-price">120 — 600 €</div>
+            <div class="home-service-arrow">→</div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ─── PILIERS ─────────────────────────────────── -->
+    <section class="home-pillars">
+      <div class="home-pillars-inner">
+        <div class="home-pillar reveal delay-1">
+          <div class="home-pillar-num">I</div>
+          <h3>Une parole biblique</h3>
+          <p>Bible Louis Segond. Tradition baptiste évangélique. Aucune confusion doctrinale.</p>
+        </div>
+        <div class="home-pillar reveal delay-2">
+          <div class="home-pillar-num">II</div>
+          <h3>Une cérémonie sur mesure</h3>
+          <p>Textes, prières et musiques choisis avec vous, dans le lieu qui a du sens pour votre histoire.</p>
+        </div>
+        <div class="home-pillar reveal delay-3">
+          <div class="home-pillar-num">III</div>
+          <h3>Un accompagnement humain</h3>
+          <p>Une écoute pastorale chaleureuse, des préparations soignées, une présence le jour J.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── AU CŒUR DU MINISTÈRE ────────────────────── -->
+    <section class="home-about" id="a-propos">
+      <div class="home-about-visual reveal">
+        <div class="home-about-visual-inner">
+          <img src="communaute_home.jpg" alt="Communauté Baptiste de Belgique — moment de célébration"
+               onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;home-about-visual-fallback&quot;>Photo de communauté — communaute_home.jpg</div>';">
+        </div>
+      </div>
+      <div class="home-about-content reveal delay-2">
+        <div class="section-eyebrow">Au cœur du ministère</div>
+        <h2 class="home-about-title">Plus de <em>quarante familles</em> accompagnées depuis 2022.</h2>
+        <p>Depuis mon ordination, plus de quarante familles m'ont confié les étapes essentielles de leur vie de foi : un baptême d'adolescent au presbytère, un mariage célébré dans un jardin de famille, des funérailles préparées dans l'urgence, une guidance spirituelle au long cours.</p>
+        <p>Chaque accompagnement est unique. Mais tous partagent la même attention : du temps pour vous écouter, une cérémonie construite avec vous, et une présence chaleureuse le jour J. C'est ce qui fait la singularité d'un ministère baptiste — pas de modèle imposé, une réponse adaptée à votre histoire.</p>
+        <div class="home-about-cta">
+          <a href="presentation.html" class="btn-secondary">Lire ma présentation complète</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── COMMUNAUTÉ ──────────────────────────────── -->
+    <section class="home-cbb" id="communaute">
+      <div class="home-cbb-inner">
+        <div class="home-cbb-content reveal">
+          <div class="home-cbb-eyebrow">La communauté</div>
+          <h2>La <em>Communauté Baptiste</em> de Belgique.</h2>
+          <p>Fondée par le Pasteur Constant, la CBB est une communauté locale en communion fraternelle avec l'AEEBLF. Elle accueille les croyants accompagnés dans son ministère — qu'ils aient reçu le baptême, célébré un rite, ou bénéficié d'une guidance spirituelle.</p>
+          <p>Elle défend une foi baptiste sobre, fidèle aux Écritures et au sacerdoce universel des fidèles, dans la tradition baptiste évangélique née au XVIIᵉ siècle.</p>
+          <a href="https://www.baptistesdebelgique.be" target="_blank" rel="noopener" class="btn-cbb">
+            Visiter baptistesdebelgique.be
+            <span>→</span>
+          </a>
+        </div>
+        <div class="home-cbb-card reveal delay-2">
+          <div class="home-cbb-card-quote">« Unitas Lux Christus »</div>
+          <div class="home-cbb-card-translation">Unis dans la lumière du Christ</div>
+          <div class="home-cbb-card-sep"></div>
+          <div class="home-cbb-card-detail">
+            Communauté locale, baptiste évangélique<br>
+            Rhode-Saint-Genèse — Brabant flamand<br>
+            En communion fraternelle avec l'AEEBLF
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA FINAL ───────────────────────────────── -->
+    <section class="home-cta" id="contact-section">
+      <div class="reveal">
+        <div class="home-cta-eyebrow">Prendre contact</div>
+        <h2>Parlons de <em>votre projet</em>.</h2>
+        <p>Un mariage, un baptême, une question, une demande de guidance ? Je reçois sur rendez-vous à Rhode-Saint-Genèse et me déplace partout en Belgique.</p>
+        <div class="home-cta-actions">
+          <a href="contact.html" class="btn-primary" style="width:auto;">Écrire un message</a>
+          <a href="tel:+32470781834" class="home-cta-phone">0470 78 18 34</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Pasteur Constant</div>
+        <div class="footer-brand-sub">
+          Pasteur baptiste indépendant<br>
+          Communauté Baptiste de Belgique<br>
+          Octave Michotlaan 1<br>
+          1640 Rhode-Saint-Genèse
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="bapteme.html">Baptême</a>
+        <a href="mariage.html">Mariage</a>
+        <a href="enterrement.html">Funérailles</a>
+        <a href="confirmation.html">Cours de Membres</a>
+        <a href="guidance.html">Guidance Spirituelle</a>
+      </div>
+      <div class="footer-col">
+        <h4>Communauté</h4>
+        <a href="presentation.html">Présentation</a>
+        <a href="#communaute">La CBB</a>
+        <a href="https://www.baptistesdebelgique.be" target="_blank" rel="noopener">baptistesdebelgique.be</a>
+        <a href="https://www.associationbaptiste.org" target="_blank" rel="noopener">AEEBLF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+32470781834">0470 78 18 34</a>
+        <a href="mailto:info@reverend.be">info@reverend.be</a>
+        <a href="contact.html">Prendre rendez-vous</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Pasteur Constant — Tous droits réservés</div>
+      <div class="footer-devise">Unitas Lux Christus</div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>
+    // Menu hamburger pour la home (pas de script de service ici)
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('hamburger-button');
+      var menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          menu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', function(e) {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add('hidden');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
