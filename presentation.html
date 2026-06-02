@@ -381,4 +381,78 @@
       <p>Le baptisme est l'un des grands courants du protestantisme, né au XVII<sup>e</sup> siècle en Angleterre et comptant aujourd'hui plus de 100 millions de croyants à travers le monde. Il se distingue par plusieurs principes fondamentaux : le baptême du croyant — un acte volontaire et conscient de profession de foi, et non un rituel administré aux nourrissons —, l'autorité souveraine des Écritures, le sacerdoce universel de tous les croyants et l'autonomie de chaque communauté locale. Cette autonomie signifie que chaque assemblée baptiste se gouverne librement sous la conduite de l'Esprit Saint, sans dépendre d'une hiérarchie ecclésiastique centralisée.</p>
       <p>C'est dans cette tradition que s'inscrit naturellement le ministère itinérant. Puisque l'Église baptiste n'est pas définie par un édifice mais par la communion des croyants réunis au nom du Christ, le pasteur baptiste a vocation à aller vers les croyants là où ils se trouvent. Ce ministère de terrain — célébrer un baptême au domicile d'une famille, bénir un mariage dans le lieu choisi par les époux, accompagner un deuil au plus près des proches — est l'expression même de la foi baptiste : l'Église se forme là où des croyants se rassemblent autour de la Parole.</p>
       <p>Pour en savoir plus sur la CBB, sa confession de foi et la vie protestante en Belgique, rendez-vous sur <a href="https://www.baptistesdebelgique.be" target="_blank" rel="noopener" style="color:var(--gold-dark);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:1px;">baptistesdebelgique.be</a>.</p>
-      <p style="font-size: 14px; color: var(--ink-faint); margin-top:
+      <p style="font-size: 14px; color: var(--ink-faint); margin-top: 10px;">En communion fraternelle avec l'<a href="https://www.associationbaptiste.org" target="_blank" rel="noopener" style="color: var(--ink-faint); text-decoration: none; border-bottom: 1px dotted var(--ink-faint);">AEEBLF</a>.</p>
+    </section>
+
+    <section class="ouvrages-section reveal" id="mes-ouvrages">
+      <h2 class="section-title">Mon <em>ouvrage</em></h2>
+      <div class="livres-container" style="grid-template-columns: minmax(280px, 360px); justify-content: center;">
+        <div class="livre-item">
+          <img src="couverture_guidance_spirituelle.png" alt="Couverture Guidance Spirituelle">
+          <p class="livre-titre">Guidance Spirituelle : Le Compas du Chrétien Face aux Défis de la Vie</p>
+          <a href="https://www.amazon.fr/Guidance-Spirituelle-Compas-Chr%C3%A9tien-D%C3%A9fis-ebook/dp/B0CLK8VZJX/" target="_blank" rel="noopener" class="livre-lien">Disponible sur Amazon →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Pasteur Constant</div>
+        <div class="footer-brand-sub">
+          Pasteur baptiste indépendant<br>
+          Communauté Baptiste de Belgique<br>
+          Octave Michotlaan 1<br>
+          1640 Rhode-Saint-Genèse
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="bapteme.html">Baptême</a>
+        <a href="mariage.html">Mariage</a>
+        <a href="enterrement.html">Funérailles</a>
+        <a href="confirmation.html">Cours de Membres</a>
+        <a href="guidance.html">Guidance Spirituelle</a>
+      </div>
+      <div class="footer-col">
+        <h4>Communauté</h4>
+        <a href="presentation.html">Présentation</a>
+        <a href="index.html#communaute">La CBB</a>
+        <a href="https://www.baptistesdebelgique.be" target="_blank" rel="noopener">baptistesdebelgique.be</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+32470781834">0470 78 18 34</a>
+        <a href="mailto:info@reverend.be">info@reverend.be</a>
+        <a href="contact.html">Prendre rendez-vous</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Pasteur Constant — Tous droits réservés</div>
+      <div class="footer-devise">Unitas Lux Christus</div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('hamburger-button');
+      var menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          menu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', function(e) {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add('hidden');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
